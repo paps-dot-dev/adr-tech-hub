@@ -1,11 +1,13 @@
 import Card from '@/components/Card'
 import Image from 'next/image'
+import Link from 'next/link'
 import {
   FaChrome,
   FaDumpster,
   FaDumpsterFire,
   FaGraduationCap,
   FaInternetExplorer,
+  FaLaptop,
   FaLeaf,
   FaServicestack,
   FaUniversity,
@@ -18,11 +20,24 @@ import dialpad from '../../public/dialpad.png'
 export default function Home() {
   return (
     <main>
-      <h1 className='text-[3em] font-semibold mx-8'>
-        Where would you like to navigate to?
-      </h1>
+      <div className='flex justify-between items-center'>
+        <h1 className='text-3xl lg:text-[3em] font-semibold mx-8'>
+          Where would you like to navigate to?
+        </h1>
+        <button className='bg-gradient-to-br from-blue-400 to-indigo-500 p-5 rounded-l-full text-white font-medium  lg:w-1/4 text-xl hover:animate-pulse'>
+          <a target='_blank' href='https://forms.gle/nAPvmbUSzYHLKDUr9'>
+            <div className='flex items-center justify-center'>
+              <FaLaptop className='text-[2em] lg:text-xl' />
+              <p className='mx-4'>
+                {' '}
+                Do You Have Some Tech You'd Like to Share?
+              </p>
+            </div>
+          </a>
+        </button>
+      </div>
       <div className='h-screen bg-white rounded-l-2xl rounded-r-2xl mt-[64px] mx-2'>
-        <div className='grid grid-cols-3 gap-8 p-8'>
+        <div className='grid grid-cols-2 lg:grid-cols-3 gap-8 p-8'>
           <Card>
             <a target='_blank' href='https://forms.gle/uTv4nEynrZnVd1Bt6'>
               <div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '@/components/Card'
-import { FaTrello, FaWrench } from 'react-icons/fa'
+import { FaLaptop, FaTrello, FaWrench } from 'react-icons/fa'
 import Image from 'next/image'
 import pbi from '../../../public/pbi.png'
 import loom from '../../../public/loom.png'
@@ -18,7 +18,7 @@ function page() {
           ...not the other way around.
         </h2>
       </div>
-      <div className='grid grid-cols-3 gap-8 p-8 mt-[128px]'>
+      <div className='grid grid-cols-2 lg:grid-cols-3 gap-8 p-8 mt-[128px]'>
         <Card>
           <a target='_blank' href='https://www.trello.com'>
             <div>
@@ -59,13 +59,23 @@ function page() {
             </div>
           </a>
         </Card>
+        <Card>
+          <a
+            target='_blank'
+            href='https://s-papineau.notion.site/0311076c494f45ec854436db7a85d471?v=e63ad873edb74000bd830bc722415349&pvs=4'>
+            <div>
+              <FaLaptop className='m-auto text-[3em]' />
+              <p className='text-center mt-2'>ADR Tech Docs</p>
+            </div>
+          </a>
+        </Card>
       </div>
       <div className='bg-blue-300 bg-opacity-65 rounded-t-2xl p-8'>
         <h1 className='text-4xl font-semibold mt-[32px]'>
           And for when it doesn't want to work...
         </h1>
         <h2 className='text-right text-2xl font-semibold'>
-          We Have Developers and IT Pros!
+          ...that's where Developers and IT Staff are here to help!
         </h2>
         <div className=' mt-8'>
           <iframe

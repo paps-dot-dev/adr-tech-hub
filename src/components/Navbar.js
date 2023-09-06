@@ -9,13 +9,30 @@ import {
   FaHome,
   FaLaptopCode,
   FaLine,
+  FaLaptop,
+  FaChartBar,
+  FaMapPin,
+  FaHandHolding,
+  FaMoneyCheck,
+  FaUserShield,
+  FaTruckLoading,
+  FaTruck,
+  FaCreditCard,
+  FaUsers,
+  FaAngry,
+  FaCode,
+  FaTicketAlt,
+  FaWrench,
+  FaAd,
+  FaHackerNews,
+  FaNewspaper,
 } from 'react-icons/fa'
 
 function Navbar() {
   const [open, setIsOpen] = useState(false)
 
   return open ? (
-    <nav className='fixed h-screen w-[500px] top-0 left-0 bg-gradient-to-br from-blue-600 to-blue-400 z-20'>
+    <nav className='fixed h-screen w-[500px] top-0 left-0 bg-gradient-to-br from-blue-600 to-blue-400 z-20 rounded-tr-3xl text-gray-700'>
       <div className='h-4/5 flex flex-col justify-between p-2 py-5'>
         <div className='flex justify-between items-center m-2'>
           <h1 className='text-[4em] font-bold text-white'>Navigation</h1>
@@ -24,60 +41,89 @@ function Navbar() {
             className='text-[3em] hover:text-white hover:animate-pulse hover:-translate-x-2 transition-all ease-linear duration-200'
           />
         </div>
+        <h2 className='text-[2.5em] font-semibold text-white border-b-2 w-2/3 p-2 mb-8 mt-8'>
+          For Everybody
+        </h2>
 
-        <ul className='text-4xl flex flex-col justify-between h-4/5 max-w-[90%]'>
+        <ul className='text-4xl flex flex-col justify-between max-w-[90%]'>
           <Link href={'/software'}>
             <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
               <FaLaptopCode className='mx-4' />
               <span>Useful Software</span>
             </li>
           </Link>
-          <Link href={'/'}>
+          <a
+            target='_blank'
+            href='https://s-papineau.notion.site/0311076c494f45ec854436db7a85d471?v=e63ad873edb74000bd830bc722415349&pvs=4'>
             <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
-              <FaDumpster className='mx-4' />
-              <span>Department</span>
+              <FaLaptop className='mx-4' />
+              <span>ADR Tech Docs</span>
+            </li>
+          </a>
+          <a target='_blank' href='https://forms.gle/6iM6ZGjhAX98QDgQ7'>
+            <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
+              <FaWrench className='mx-4' />
+              <span>Service Ticket</span>
+            </li>
+          </a>
+
+          <h2 className='text-[1em] font-semibold text-white border-b-2 w-2/3 p-2 mt-[56px] mb-8'>
+            By Department
+          </h2>
+        </ul>
+        <ul className='text-4xl flex flex-col justify-between h-4/5 max-w-[90%]'>
+          <Link href={'/analytics'}>
+            <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
+              <FaChartBar className='mx-4' />
+              <span>Analytics</span>
             </li>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/sales'}>
             <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
               <FaDumpster className='mx-4' />
-              <span>Department</span>
+              <span>Sales</span>
             </li>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/team-support'}>
             <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
-              <FaDumpster className='mx-4' />
-              <span>Department</span>
+              <FaHandHolding className='mx-4' />
+              <span>Team Support</span>
             </li>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/billing'}>
             <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
-              <FaDumpster className='mx-4' />
-              <span>Department</span>
+              <FaMoneyCheck className='mx-4' />
+              <span>Billing</span>
             </li>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/customer-concern'}>
             <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
-              <FaDumpster className='mx-4' />
-              <span>Department</span>
+              <FaUserShield className='mx-4' />
+              <span>Customer Concern</span>
             </li>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/hauler-liaison'}>
             <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
-              <FaDumpster className='mx-4' />
-              <span>Department</span>
+              <FaTruck className='mx-4' />
+              <span>Hauler Liaison</span>
             </li>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/chargeback'}>
             <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
-              <FaDumpster className='mx-4' />
-              <span>Department</span>
+              <FaCreditCard className='mx-4' />
+              <span>Chargeback</span>
             </li>
           </Link>
-          <Link href={'/'}>
+          <Link href={'/marketing'}>
             <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
-              <FaDumpster className='mx-4' />
-              <span>Department</span>
+              <FaNewspaper className='mx-4' />
+              <span>Marketing</span>
+            </li>
+          </Link>
+          <Link href={'/leadership'}>
+            <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
+              <FaUsers className='mx-4' />
+              <span>Leadership</span>
             </li>
           </Link>
         </ul>
