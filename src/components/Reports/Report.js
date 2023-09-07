@@ -18,7 +18,9 @@ function Report({ reports }) {
   }, [])
 
   return reports.map((report) => (
-    <div className='bg-slate-400 mt-[64px] rounded-t-xl bg-opacity-30'>
+    <div
+      key={report.title}
+      className='bg-slate-400 mt-[64px] rounded-t-xl bg-opacity-30'>
       <div className='flex justify-between items-center'>
         <h1 className='text-xl md:text-4xl p-4 mb-[32px] bg-blue-400 w-3/5 rounded-r-xl'>
           {report.title.toUpperCase()}
@@ -31,7 +33,6 @@ function Report({ reports }) {
       </div>
       <iframe
         className='rounded-xl '
-        key={report.title}
         title={report.title}
         width={windowWidth}
         height='600'
