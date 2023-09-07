@@ -9,6 +9,8 @@ import {
   FaMapPin,
   FaMapMarked,
   FaMoneyBill,
+  FaLevelUpAlt,
+  FaTable,
 } from 'react-icons/fa'
 import paychex from '../../../public/paychex.png'
 import Image from 'next/image'
@@ -59,16 +61,7 @@ function page() {
               </div>
             </a>
           </Card>
-          <Card>
-            <a
-              target='_blank'
-              href='https://www.dumpsters.com/resources/concrete-weight-calculator'>
-              <div>
-                <FaCalculator className='m-auto text-[3em]' />
-                <p className='text-center mt-2'>Concrete Weight Calculator</p>
-              </div>
-            </a>
-          </Card>
+
           <Card>
             <a
               target='_blank'
@@ -87,13 +80,58 @@ function page() {
               </div>
             </a>
           </Card>
+          <h3 className='col-span-2 lg:col-span-4 text-[3em] font-semibold text-white border-b-2 w-1/2 mt-8'>
+            Calculators and Tools
+          </h3>
           <Card>
             <a
               target='_blank'
-              href='https://docs.google.com/spreadsheets/d/1ExFlBmH_8gKQDtG3cXDpPpi2s55ZJEhvFb5Dowl65uA/edit#gid=1925829189'>
+              href='https://www.dumpsters.com/resources/concrete-weight-calculator'>
+              <div>
+                <FaCalculator className='m-auto text-[3em]' />
+                <p className='text-center mt-2'>Concrete Weight Calculator</p>
+              </div>
+            </a>
+          </Card>
+          <Card>
+            <a
+              target='_blank'
+              href='https://docs.google.com/spreadsheets/d/1ExFlBmH_8gKQDtG3cXDpPpi2s55ZJEhvFb5Dowl65uA/edit?usp=sharing'>
               <div>
                 <FaMoneyBill className='m-auto text-[3em]' />
-                <p className='text-center mt-2'>Commission Calculator</p>
+                <p className='text-center mt-2'>Simple Commission Calculator</p>
+              </div>
+            </a>
+          </Card>
+          <Card>
+            <a
+              target='_blank'
+              href='https://docs.google.com/spreadsheets/d/16UNHnFSIz1hJWIVCOx_8it2aJ5ZMSGqkwpvWAk6SVvU/edit?usp=sharing'>
+              <div>
+                <FaLevelUpAlt className='m-auto text-[3em]' />
+                <p className='text-center mt-2'>
+                  Differential Commission Calculator
+                </p>
+              </div>
+            </a>
+          </Card>
+          <Card>
+            <a
+              target='_blank'
+              href='https://docs.google.com/spreadsheets/d/1kwwq63qsTaKxEhaWrSeBb-ggOhaYkXI62uc25F5yDVE/edit?usp=sharing'>
+              <div>
+                <FaCalculator className='m-auto text-[3em]' />
+                <p className='text-center mt-2'>Sales Goal Calculator</p>
+              </div>
+            </a>
+          </Card>
+          <Card>
+            <a
+              target='_blank'
+              href='https://docs.google.com/spreadsheets/d/1EhetQFJRVQb0GGDoHyESXIyyRzCScgK2BajpeNy7_ro/edit?usp=sharing'>
+              <div>
+                <FaTable className='m-auto text-[3em]' />
+                <p className='text-center mt-2'>Call Goal Table</p>
               </div>
             </a>
           </Card>

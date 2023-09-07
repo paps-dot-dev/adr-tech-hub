@@ -20,11 +20,11 @@ import dialpad from '../../public/dialpad.png'
 export default function Home() {
   return (
     <main>
-      <div className='flex justify-between items-center'>
+      <div className='flex flex-col md:flex-row justify-between items-end md:items-center'>
         <h1 className='text-3xl lg:text-[3em] font-semibold mx-8'>
           Where would you like to navigate to?
         </h1>
-        <button className='bg-gradient-to-br from-blue-400 to-indigo-500 p-5 rounded-l-full text-white font-medium  lg:w-1/4 text-xl hover:animate-pulse'>
+        <button className='bg-gradient-to-br from-blue-400 to-indigo-500 p-5 mt-6 md:mt-0 w-3/4 rounded-l-full text-white font-medium  lg:w-1/4 text-xl hover:animate-pulse'>
           <a target='_blank' href='https://forms.gle/nAPvmbUSzYHLKDUr9'>
             <div className='flex items-center justify-center'>
               <FaLaptop className='text-[2em] lg:text-xl' />
