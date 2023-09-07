@@ -11,14 +11,14 @@ function page() {
   return (
     <main className='flex flex-col justify-between'>
       <div>
-        <h1 className='text-[4em] font-semibold'>
+        <h1 className='text-[3em] md:text-[4em] font-semibold'>
           Software that works for you...
         </h1>
-        <h2 className='text-right text-[3em] mt-4'>
+        <h2 className='text-right text-[2em] md:text-[3em] mt-4'>
           ...not the other way around.
         </h2>
       </div>
-      <div className='grid grid-cols-2 lg:grid-cols-3 gap-8 p-8 mt-[128px]'>
+      <div className='grid grid-cols-2 lg:grid-cols-3 gap-8 p-8 mt-[32px] md:mt-[128px]'>
         <Card>
           <a target='_blank' href='https://www.trello.com'>
             <div>
