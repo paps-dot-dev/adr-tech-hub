@@ -4,7 +4,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 
 function Report({ reports }) {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(1920)
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -36,9 +36,7 @@ function Report({ reports }) {
         title={report.title}
         width={windowWidth}
         height='600'
-        src={report.url}
-        frameborder='0'
-        allowFullScreen='true'></iframe>
+        src={report.url}></iframe>
     </div>
   ))
 }
