@@ -12,6 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
+      <head>
+        <meta
+          property='og:image'
+          content='http://adr2021.wpengine.com/wp-content/uploads/2021/02/ADR-B-3.png'
+        />
+      </head>
       <body className={inter.className}>
         <Header />
         {children}
