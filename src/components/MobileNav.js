@@ -1,6 +1,13 @@
 'use client'
 import React from 'react'
-import { FaBars, FaHome, FaPlusCircle, FaRegWindowClose } from 'react-icons/fa'
+import {
+  FaBars,
+  FaBookOpen,
+  FaHome,
+  FaPlusCircle,
+  FaRegWindowClose,
+  FaSchool,
+} from 'react-icons/fa'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
@@ -74,11 +81,10 @@ function MobileNav() {
                 <span>Service Ticket</span>
               </li>
             </a>
-
-            <h2 className='text-[1em] font-semibold text-white border-b-2 w-2/3 p-2 mt-[56px] mb-8'>
-              By Department
-            </h2>
           </ul>
+          <h2 className='text-[2em] font-semibold text-white border-b-2 w-2/3 p-2 mt-[56px] mb-8'>
+            By Department
+          </h2>
           <ul className='text-2xl flex flex-col justify-between h-4/5 max-w-[65%]'>
             <Link onClick={() => setIsOpen(false)} href={'/analytics'}>
               <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
@@ -132,6 +138,12 @@ function MobileNav() {
               <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
                 <FaUsers className='mx-4' />
                 <span>Leadership</span>
+              </li>
+            </Link>
+            <Link onClick={() => setIsOpen(false)} href={'/training'}>
+              <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
+                <FaBookOpen className='mx-4' />
+                <span>Training</span>
               </li>
             </Link>
           </ul>

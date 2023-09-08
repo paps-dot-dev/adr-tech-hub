@@ -26,6 +26,7 @@ import {
   FaAd,
   FaHackerNews,
   FaNewspaper,
+  FaBookOpen,
 } from 'react-icons/fa'
 
 function Navbar() {
@@ -124,6 +125,12 @@ function Navbar() {
             <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
               <FaUsers className='mx-4' />
               <span>Leadership</span>
+            </li>
+          </Link>
+          <Link onClick={() => setIsOpen(false)} href={'/training'}>
+            <li className='font-semibold flex justify-between items-center hover:text-white hover:border-b-2 hover:border-white p-4 transition-all duration-200 hover:animate-pulse ease-linear'>
+              <FaBookOpen className='mx-4' />
+              <span>Training</span>
             </li>
           </Link>
         </ul>

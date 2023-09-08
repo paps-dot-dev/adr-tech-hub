@@ -7,7 +7,7 @@ function page() {
     <>
       <Department
         department='Chargeback'
-        phrase='Would you like to secure your spot on the schedule for not having to mess with me for just $1 down?...'>
+        phrase='You did not just charge back $1...'>
         <Construction />
       </Department>
     </>

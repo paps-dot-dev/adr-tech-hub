@@ -19,10 +19,8 @@ const reports = [
 function page() {
   return (
     <>
-      <Department
-        phrase="100,000 row spreadsheet? That's cute..."
-        department='Analytics'>
-        <div className='grid grid-cols-4 p-8'>
+      <Department phrase='Crunching the Numbers...' department='Analytics'>
+        <div className='grid grid-cols-2 md:grid-cols-4 p-8'>
           <Card>
             <a target='_blank' href='https://powerbi.microsoft.com/en-us/'>
               <div className='flex justify-center'>

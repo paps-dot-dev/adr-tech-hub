@@ -12,9 +12,7 @@ import Image from 'next/image'
 function page() {
   return (
     <>
-      <Department
-        department='Billing'
-        phrase="'Where's my money, man...' - Stewie Griffin.">
+      <Department department='Billing' phrase='Show me the money!'>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-4 p-8'>
           <Card>
             <a target='_blank' href='https://www.leaf-crm.com'>

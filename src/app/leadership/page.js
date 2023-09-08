@@ -11,7 +11,7 @@ function page() {
     <>
       <Department
         department='Leadership'
-        phrase='The Leaders and Best...or whatever my little sister said...'>
+        phrase='Woooooooooahhhhhhhh YES! Say "Aye!" '>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-4 p-2'>
           <Link href={'/leadership/reports'}>
             <Card>
