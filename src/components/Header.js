@@ -11,6 +11,11 @@ function Header() {
       <Navbar />
       <MobileNav />
       <div className='flex flex-col justify-center items-center p-3 md:p-0'>
+        <Link
+          className='hover:animate-pulse cursor-not-allowed md:hidden'
+          href={'/leadership/executives'}>
+          <Image src={logo} height={100} />
+        </Link>
         <h1 className='text-2xl font-semibold lg:text-[3em]'>
           Welcome to <span className='text-yellow-200'>ADR OS</span>
         </h1>
