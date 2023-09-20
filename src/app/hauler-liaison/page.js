@@ -50,7 +50,7 @@ function page() {
         phrase='Favorite flavor of Kool-Aid? ADR...'>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-4 p-4'>
           {cards.map((card) => (
-            <a target='_blank' href={card.link}>
+            <a key={card.name} target='_blank' href={card.link}>
               <Card>
                 <Image src={card.image} width={64} alt='image' />
                 <p>{card.name}</p>
