@@ -33,7 +33,7 @@ function Navbar() {
   const [open, setIsOpen] = useState(false)
 
   return open ? (
-    <nav className='md:fixed h-screen w-[500px] top-0 left-0 bg-gradient-to-br from-blue-600 to-blue-400 z-20 rounded-tr-3xl text-gray-700'>
+    <nav className='md:fixed h-screen w-[500px] top-0 left-0 bg-gradient-to-br from-blue-600 to-blue-400 z-20 rounded-tr-3xl text-gray-700 overflow-y-auto'>
       <div className='h-4/5 flex flex-col justify-between p-2 py-5 '>
         <div className='flex justify-between items-start m-2'>
           <h1 className='text-[3em] font-bold text-white'>Navigation</h1>
