@@ -52,7 +52,7 @@ function page() {
           {cards.map((card) => (
             <a target='_blank' href={card.link}>
               <Card>
-                <Image src={card.image} width={64} />
+                <Image src={card.image} width={64} alt='image' />
                 <p>{card.name}</p>
               </Card>
             </a>
