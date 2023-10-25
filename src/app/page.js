@@ -1,114 +1,49 @@
-import Card from '@/components/Card'
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  FaChrome,
-  FaDumpster,
-  FaDumpsterFire,
-  FaGraduationCap,
-  FaInternetExplorer,
-  FaLaptop,
-  FaLeaf,
-  FaServicestack,
-  FaUniversity,
-  FaVideo,
-  FaWrench,
-} from 'react-icons/fa'
-import paychex from '../../public/paychex.png'
-import dialpad from '../../public/dialpad.png'
+import SignInForm from '@/components/Auth/SignInForm'
+import adr from '../../public/logo.png'
+import hero from '../../public/signinbg.jpg'
+
+import { supabase } from '../lib/helper/supabaseClient'
+import { FaApple, FaGithub, FaGoogle } from 'react-icons/fa'
 
 export default function Home() {
   return (
-    <main>
-      <div className='flex flex-col md:flex-row justify-between items-end md:items-center'>
-        <h1 className='text-3xl lg:text-[3em] font-semibold mx-8'>
-          Where would you like to navigate to?
-        </h1>
-        <button className='bg-gradient-to-br from-blue-400 to-indigo-500 p-5 mt-6 md:mt-0 w-3/4 rounded-l-full text-white font-medium  lg:w-1/4 text-xl hover:animate-pulse'>
-          <a target='_blank' href='https://forms.gle/nAPvmbUSzYHLKDUr9'>
-            <div className='flex items-center justify-center'>
-              <FaLaptop className='text-[2em] lg:text-xl' />
-              <p className='mx-4'>
-                {' '}
-                Do You Have Some Tech You'd Like to Share?
-              </p>
-            </div>
-          </a>
-        </button>
-      </div>
-      <div className='h-screen bg-white rounded-l-2xl rounded-r-2xl mt-[64px] mx-2'>
-        <div className='grid grid-cols-2 lg:grid-cols-3 gap-8 p-8'>
-          <Card>
-            <a target='_blank' href='https://forms.gle/uTv4nEynrZnVd1Bt6'>
-              <div>
-                <FaWrench className='m-auto text-[2em]' />
-                <p className='text-center mt-2'>Submit a Service Ticket</p>
-              </div>
-            </a>
-          </Card>
-          <Card>
-            <a target='_blank' href='https://www.leaf-crm.com'>
-              <div>
-                <FaLeaf className='m-auto text-[2em]' />
-                <p className='text-center mt-2'>Open Leaf CRM</p>
-              </div>
-            </a>
-          </Card>
-          <Card>
-            <a target='_blank' href='https://zoom.us/j/99970048256'>
-              <div>
-                <FaVideo className='m-auto text-[2em]' />
-                <p className='text-center mt-2'>Join ADR Office</p>
-              </div>
-            </a>
-          </Card>
-          <Card>
-            <a target='_blank' href='https://myapps.paychex.com/'>
-              <div>
-                <Image src={paychex} height={300} className='m-auto' />
-              </div>
-            </a>
-          </Card>
-          <Card>
-            <a target='_blank' href='https://www.service-leaf-crm.com'>
-              <div>
-                <FaDumpsterFire className='m-auto text-[3em]' />
-                <p className='text-center mt-2'>Bin Squad CRM</p>
-              </div>
-            </a>
-          </Card>
-          <Card>
-            <a target='_blank' href='https://lsvtlogin.lightspeedvt.com/'>
-              <div>
-                <FaUniversity className='m-auto text-[3em]' />
-                <p className='text-center mt-2'>GC University</p>
-              </div>
-            </a>
-          </Card>
-          <Card>
-            <a target='_blank' href='https://vt.lightspeedvt.com/'>
-              <div>
-                <FaGraduationCap className='m-auto text-[3em]' />
-                <p className='text-center mt-2'>ADR University</p>
-              </div>
-            </a>
-          </Card>
+    <main className='bg-slate-900 min-h-screen flex flex-col justify-center items-center'>
+      <div
+        className='bg-gradient-to-br from-slate-500 to-slate-300 rounded-xl w-3/4 lg:h-[800px]  flex 
+      lg:flex-row lg:justify-between flex-col items-center ring-1 ring-blue-300 ease-in'>
+        <div>
+          <Image
+            className='lg:max-w-[40vw] lg:max-h-screen flex-shrink flex-grow hidden lg:flex rounded-xl'
+            src={hero}
+          />
+        </div>
+        <div className=' rounded-md min-h-full flex justify-center items-center flex-col lg:w-2/5 w-full mr-4 mt-8'>
+          <Image src={adr} className='max-w-[300px]' />
+          <h1 className='text-3xl font-bold mt-8'>Welcome to ADR OS</h1>
+          <SignInForm />
 
-          <Card>
-            <a target='_blank' href='https://dialpad.com/login/'>
-              <div className='flex justify-center'>
-                <Image src={dialpad} height={200} />
-              </div>
-            </a>
-          </Card>
-          <Card>
-            <a target='_blank' href='https://www.affordabledumpsterrental.com/'>
-              <div>
-                <FaChrome className='m-auto text-[3em]' />
-                <p className='text-center mt-2'>ADR Website</p>
-              </div>
-            </a>
-          </Card>
+          <p>
+            Sign in with a Provider or{'   '}
+            <Link
+              className='font-semibold hover:text-blue-400 ease-linear duration-100'
+              href={'/create-account'}>
+              Create Account
+            </Link>
+          </p>
+
+          <div className='py-2 flex justify-between items-center mt-4 mb-8'>
+            <button className='w-[160px] h-[48px] text-2xl bg-opacity-50 bg-white rounded-full flex justify-center items-center hover:-translate-y-1 ease-in-out duration-200 hover:bg-slate-600 hover:text-white hover:ring-2 ring-blue-400 mx-2'>
+              <FaGoogle />
+            </button>
+            <button className='w-[160px] h-[48px] text-2xl bg-opacity-50 bg-white rounded-full flex justify-center items-center hover:-translate-y-1 ease-in-out duration-200 hover:bg-slate-600 hover:text-white hover:ring-2 ring-blue-400 mx-2'>
+              <FaApple />
+            </button>
+            <button className='w-[160px] h-[48px] text-2xl bg-opacity-50 bg-white rounded-full flex justify-center items-center hover:-translate-y-1 ease-in-out duration-200 hover:bg-slate-600 hover:text-white hover:ring-2 ring-blue-400 ml-2'>
+              <FaGithub />
+            </button>
+          </div>
         </div>
       </div>
     </main>
