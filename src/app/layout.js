@@ -1,3 +1,4 @@
+import Header from '@/components/Header'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
           content='http://adr2021.wpengine.com/wp-content/uploads/2021/02/ADR-B-3.png'
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

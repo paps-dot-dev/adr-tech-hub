@@ -4,8 +4,10 @@ import React from 'react'
 function DashboardLayout({ children }) {
   return (
     <>
-      <Header />
-      {children}
+      <body>
+        <Header />
+        {children}
+      </body>
     </>
   )
 }

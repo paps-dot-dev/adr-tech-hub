@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
 import { config } from 'dotenv'
 
-export const supabase = () => {
-  config()
-  createClient(process.env.SUPABASE_URL, process.env.SUPABASE_API_KEY)
-}
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)
